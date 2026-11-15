@@ -1,0 +1,14 @@
+import * as taskModel from '../models/task.js';
+
+export async function getAllTasks() {
+    return taskModel.findAll();
+}
+
+export async function getTaskById(id){
+    const task = await taskModel.findById(id);
+
+    if(!task){
+        throw new Error("Not Found");
+    }
+    return task;
+}

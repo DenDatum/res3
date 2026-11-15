@@ -1,0 +1,34 @@
+<h2></h2>
+<div>
+    {{#each products}}
+    <article class="products">
+        <h3>{{description}}</h3>
+        <p>{{category}}</p>
+
+        <a hreflang="/products">{{id}}</a>
+<h2>{{name}}</h2>
+<p>{{price}}</p>
+{{else}}
+<p> Not</p>
+{{/each}}
+</article>
+</div>
+
+
+
+<article class="product-detail">
+    <h2>{{products.name}}</h2>
+
+<p> {{products.price}}</p>
+
+<p> {{products.category}}</p>
+
+<p> {{products.description}}</p>
+
+{{#if is Aveilable}}
+<p> ddd+</p>
+{{else}}
+<p>ddd-</p>
+{{/if}}
+<a href="/products">=></a>
+</article>
